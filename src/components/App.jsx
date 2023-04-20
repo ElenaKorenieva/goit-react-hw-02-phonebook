@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { FilteredItem } from 'components/FilteredItem';
 import { ContactsList } from 'components/ContactsList';
-import { Container } from 'App.styled';
+import { Container } from 'components/App.styled';
 
 export class App extends Component {
   state = {

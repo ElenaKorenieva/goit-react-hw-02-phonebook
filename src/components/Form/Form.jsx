@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types';
 import { FormEl, InputEl, LabelEl, SubmitBtn } from './Form.styled';
 
 export class Form extends Component {
@@ -15,9 +14,9 @@ export class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
+    const formData = e.currentTarget;
     this.props.handleSubmit(this.state);
-    form.reset();
+    formData.reset();
   };
 
   render() {
@@ -51,7 +50,3 @@ export class Form extends Component {
     );
   }
 }
-
-Form.propTypes = {
-  handleSubmit: propTypes.func.isRequired,
-};
