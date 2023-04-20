@@ -14,9 +14,12 @@ export class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const formData = e.currentTarget;
     this.props.handleSubmit(this.state);
-    formData.reset();
+    this.formReset();
+  };
+
+  formReset = () => {
+    this.setState({ name: '', number: '' });
   };
 
   render() {
